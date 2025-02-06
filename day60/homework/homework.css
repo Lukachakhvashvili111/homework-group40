@@ -1,0 +1,64 @@
+
+
+.block1{
+    background-color: blue;
+    width: auto;
+    height: auto;
+    display:flex;
+    justify-content: center;
+    animation: rotate 10s ;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in
+}
+.block2{
+    background-color: red;
+    width: auto;
+    height: auto;
+    justify-content:center;
+    animation: rotation 10s;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+.block3{
+    background-color: rgb(238, 255, 0);
+    width: 100px;
+    height: 100px;
+    justify-content: left;
+    animation: rotation 10s ;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease  
+}
+.block4{
+    background-color:brown;
+    width: auto;
+    height: auto;
+    justify-content: right;
+    animation: rotation 10s ;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear
+  }  
+    
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg) scale(0) ;
+    }
+    25%{
+        transform: rotate(90deg) scale(0);
+    }
+    50%{
+        transform: rotate(180deg)scale(0);
+    }
+    75%{
+        transform: rotate(90deg)scale(0);
+    }
+    100%{
+        transform: rotate(0deg) scale(0);
+    }
+
+
+}

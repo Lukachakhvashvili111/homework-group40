@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Divs</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            gap: 20px;
+        }
+        .container {
+            display: flex;
+            gap: 15px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border-radius: 10px;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        
+        .box:nth-child(1) { background: red; animation: rotate-clockwise 3s linear infinite; }
+        .box:nth-child(2) { background: blue; animation: rotate-counterclockwise 3s ease infinite; }
+        .box:nth-child(3) { background: green; animation: rotate-alternate 3s ease-in infinite alternate; }
+        .box:nth-child(4) { background: yellow; animation: rotate-alternate-reverse 3s ease-out infinite alternate-reverse; }
+        .box:nth-child(5) { background: purple; animation: rotate-reverse 3s ease-in-out infinite reverse; }
+        
+        @keyframes rotate-clockwise {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(720deg); }
+        }
+        
+        @keyframes rotate-counterclockwise {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-720deg); }
+        }
+        
+        @keyframes rotate-alternate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(720deg); }
+        }
+        
+        @keyframes rotate-alternate-reverse {
+            0% { transform: rotate(720deg); }
+            100% { transform: rotate(0deg); }
+        }
+        
+        @keyframes rotate-reverse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-720deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+</body>
+</html>

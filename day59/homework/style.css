@@ -1,0 +1,42 @@
+.rotating-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    animation: rotation 5s;
+    animation-name: rotation;
+    animation-duration: 10s;
+}
+@keyframes rotation{
+0%{
+   background-color: black; 
+   transform:rotate(0deg) scale(0) ;
+}
+20%{
+   background-color: aqua;
+   transform: rotate(40deg) scale(0); 
+}
+
+50%{
+    background-color: blue;
+    transform: rotate(90deg) scale(0);
+}
+80%{
+    background-color: brown;
+    transform: rotate(180deg) scale(0);
+}
+100%{
+    background-color: blanchedalmond;
+    transform: rotate(0deg) scale(0);
+}
+
+
+
+
+
+
+
+
+}

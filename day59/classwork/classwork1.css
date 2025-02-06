@@ -1,0 +1,52 @@
+.animated-div {
+    width: 100px;
+    height: 100px;
+    background-color: #1abc9c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    animation: 10s ease-in-out forwards;
+    animation-name: complexA;
+}
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+
+  @keyframes complexAnimation {
+    0% {
+      background-color: #1abc9c;
+      transform: rotate(0deg) scale(1);
+    }
+    20% {
+      background-color: #3498db; 
+      transform: rotate(90deg);
+    }
+    40% {
+      background-color: #9b59b6;
+      transform: rotate(-180deg);
+    }
+    60% {
+      background-color: #e74c3c; 
+      transform: rotate(360deg);
+    }
+    80% {
+      background-color: #f1c40f; 
+      transform: rotate(360deg) scale(1.5) scaleX(2);
+    }
+    100% {
+      background-color: #1abc9c; 
+      transform: rotate(0deg) scale(1);
+    }
+  }
+
