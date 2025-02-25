@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Div</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); 
+            grid-template-rows: repeat(5, 1fr);  
+            gap: 10px;
+            height: 100vh;
+            padding: 10px;
+        }
+        .center-div {
+            grid-column: 2 / 4;
+            grid-row: 2 / 4;   
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="center-div">
+        <p>Centered Div</p>
+    </div>
+</div>
+
+</body>
+</html>
